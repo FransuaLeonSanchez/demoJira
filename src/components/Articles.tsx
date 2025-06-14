@@ -30,8 +30,8 @@ function Articles() {
     {
       id: '1',
       title: 'Implementación efectiva de Scrum en equipos distribuidos: Un enfoque adaptativo',
-      author: 'Dr. Carlos Mendoza',
-      authorRole: 'Profesor de Ingeniería de Software',
+      author: 'Luis Huamán Silva',
+      authorRole: 'Líder de Investigación - UNI',
       date: '15 Nov 2024',
       category: 'metodologias',
       readTime: '12 min',
@@ -43,8 +43,8 @@ function Articles() {
     {
       id: '2',
       title: 'Microservicios y Event Sourcing: Patrones para sistemas altamente escalables',
-      author: 'Ing. Ana Torres',
-      authorRole: 'Investigadora Senior',
+      author: 'Walter Velasquez Solis',
+      authorRole: 'Arquitecto de Software - Estudiante UNI',
       date: '12 Nov 2024',
       category: 'arquitectura',
       readTime: '15 min',
