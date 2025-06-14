@@ -99,7 +99,7 @@ function Forums() {
     {
       id: '1',
       title: '¿Cómo medir la efectividad de las retrospectivas en Scrum?',
-      author: 'Pedro Sánchez',
+      author: 'Fransua León Sánchez',
       avatar: '👨‍🎓',
       time: 'hace 1 hora',
       category: 'metodologias',
@@ -113,8 +113,8 @@ function Forums() {
     {
       id: '2',
       title: 'Implementación de feature flags para despliegues graduales',
-      author: 'Laura Jiménez',
-      avatar: '👩‍💻',
+      author: 'Luis Huamán Silva',
+      avatar: '👨‍💻',
       time: 'hace 3 horas',
       category: 'devops',
       tags: ['feature-flags', 'deployment', 'best-practices'],
@@ -127,7 +127,7 @@ function Forums() {
     {
       id: '3',
       title: 'Patrones para manejar la consistencia eventual en microservicios',
-      author: 'Roberto Chen',
+      author: 'Víctor Espinoza Valverde',
       avatar: '👨‍🏫',
       time: 'hace 5 horas',
       category: 'arquitectura',
@@ -140,8 +140,8 @@ function Forums() {
     {
       id: '4',
       title: 'Debate: ¿SAFe realmente funciona o es demasiado burocrático?',
-      author: 'Carmen Díaz',
-      avatar: '👩‍🎓',
+      author: 'Alvaro Flores Rivas',
+      avatar: '👨‍🎓',
       time: 'hace 8 horas',
       category: 'metodologias',
       tags: ['SAFe', 'escalado', 'debate'],
@@ -153,7 +153,7 @@ function Forums() {
     {
       id: '5',
       title: 'Tutorial: Configurar pipeline de ML con GitOps',
-      author: 'Miguel Ángel Ruiz',
+      author: 'Jhosep Sosa Palacios',
       avatar: '🧑‍💻',
       time: 'ayer',
       category: 'devops',
@@ -162,6 +162,19 @@ function Forums() {
       replies: 9,
       likes: 34,
       excerpt: 'Les comparto un tutorial paso a paso para configurar un pipeline de Machine Learning usando principios de GitOps...'
+    },
+    {
+      id: '6',
+      title: 'Experiencia migrando de Jenkins a GitHub Actions',
+      author: 'Walter Velasquez Solis',
+      avatar: '👨‍💻',
+      time: 'hace 2 días',
+      category: 'devops',
+      tags: ['CI/CD', 'GitHub Actions', 'Jenkins', 'migración'],
+      views: 145,
+      replies: 11,
+      likes: 28,
+      excerpt: 'Después de 3 años usando Jenkins, migramos completamente a GitHub Actions. Aquí comparto los desafíos, soluciones y lecciones aprendidas...'
     }
   ]
 

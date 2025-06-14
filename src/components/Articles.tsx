@@ -35,7 +35,7 @@ function Articles() {
       date: '15 Nov 2024',
       category: 'metodologias',
       readTime: '12 min',
-      abstract: 'Este artículo examina las estrategias más efectivas para implementar Scrum en equipos distribuidos geográficamente, presentando un marco adaptativo que considera las diferencias culturales, zonas horarias y herramientas de colaboración digital.',
+      abstract: 'Este artículo examina las estrategias más efectivas para implementar Scrum en equipos distribuidos geográficamente, presentando un marco adaptativo que considera las diferencias culturales, zonas horarias y herramientas de colaboración digital. Coautores: Isaac Adauto Huaman y Jhosep Sosa Palacios.',
       image: 'from-blue-400 to-blue-600',
       tags: ['Scrum', 'Equipos Distribuidos', 'Metodologías Ágiles'],
       featured: true
@@ -56,8 +56,8 @@ function Articles() {
     {
       id: '3',
       title: 'CI/CD en la era de Kubernetes: Automatización completa del pipeline',
-      author: 'Miguel Rodríguez',
-      authorRole: 'DevOps Engineer',
+      author: 'Bill Lopez Milla',
+      authorRole: 'DevOps Engineer - Estudiante UNI',
       date: '10 Nov 2024',
       category: 'devops',
       readTime: '10 min',
@@ -68,8 +68,8 @@ function Articles() {
     {
       id: '4',
       title: 'Transformación Ágil en el sector bancario: Caso de éxito BCP',
-      author: 'Lic. Patricia Vargas',
-      authorRole: 'Consultora Ágil',
+      author: 'Angela Pizarro Huarcaya',
+      authorRole: 'Consultora Ágil - Egresada UNI',
       date: '8 Nov 2024',
       category: 'casos',
       readTime: '8 min',
@@ -80,8 +80,8 @@ function Articles() {
     {
       id: '5',
       title: 'Feature Flags y Continuous Deployment: Reduciendo el riesgo en producción',
-      author: 'Roberto Silva',
-      authorRole: 'Tech Lead',
+      author: 'Roberto Flores Velarde',
+      authorRole: 'Tech Lead - Investigador UNI',
       date: '5 Nov 2024',
       category: 'devops',
       readTime: '9 min',
@@ -92,14 +92,38 @@ function Articles() {
     {
       id: '6',
       title: 'Domain-Driven Design en arquitecturas serverless',
-      author: 'Dra. Lucía Fernández',
-      authorRole: 'Arquitecta de Software',
+      author: 'Ximena Quispe Tenorio',
+      authorRole: 'Arquitecta de Software - Estudiante UNI',
       date: '2 Nov 2024',
       category: 'arquitectura',
       readTime: '14 min',
       abstract: 'Exploramos cómo aplicar los principios de Domain-Driven Design en arquitecturas serverless, manteniendo la cohesión del dominio mientras aprovechamos la escalabilidad y eficiencia de las funciones como servicio.',
       image: 'from-pink-400 to-pink-600',
       tags: ['DDD', 'Serverless', 'Arquitectura']
+    },
+    {
+      id: '7',
+      title: 'Estrategias de Testing en Desarrollo Adaptativo: Un Enfoque Práctico',
+      author: 'Isaac Adauto Huaman',
+      authorRole: 'Líder de Investigación - UNI',
+      date: '30 Oct 2024',
+      category: 'metodologias',
+      readTime: '11 min',
+      abstract: 'Análisis comprehensivo de estrategias de testing que se adaptan dinámicamente a los cambios del software, incluyendo técnicas de test automation, property-based testing y mutation testing.',
+      image: 'from-teal-400 to-teal-600',
+      tags: ['Testing', 'Automatización', 'Calidad']
+    },
+    {
+      id: '8',
+      title: 'Observabilidad en Sistemas Distribuidos: Métricas, Logs y Trazas',
+      author: 'Jhosep Sosa Palacios',
+      authorRole: 'Especialista DevOps - Estudiante UNI',
+      date: '28 Oct 2024',
+      category: 'devops',
+      readTime: '13 min',
+      abstract: 'Guía práctica para implementar observabilidad completa en arquitecturas de microservicios, cubriendo las mejores prácticas para métricas, logs estructurados y trazabilidad distribuida.',
+      image: 'from-amber-400 to-amber-600',
+      tags: ['Observabilidad', 'Monitoring', 'Microservicios']
     }
   ]
 
@@ -220,20 +244,29 @@ function Articles() {
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
-                      <span className="text-blue-600 font-semibold">CM</span>
+                      <span className="text-blue-600 font-semibold">IH</span>
                     </div>
                     <div>
-                      <p className="font-medium text-gray-900 text-sm">Dr. Carlos Mendoza</p>
-                      <p className="text-xs text-gray-600">8 artículos</p>
+                      <p className="font-medium text-gray-900 text-sm">Isaac Adauto Huaman</p>
+                      <p className="text-xs text-gray-600">5 artículos</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center">
-                      <span className="text-purple-600 font-semibold">AT</span>
+                      <span className="text-purple-600 font-semibold">RF</span>
                     </div>
                     <div>
-                      <p className="font-medium text-gray-900 text-sm">Ing. Ana Torres</p>
-                      <p className="text-xs text-gray-600">6 artículos</p>
+                      <p className="font-medium text-gray-900 text-sm">Roberto Flores Velarde</p>
+                      <p className="text-xs text-gray-600">4 artículos</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                      <span className="text-green-600 font-semibold">XQ</span>
+                    </div>
+                    <div>
+                      <p className="font-medium text-gray-900 text-sm">Ximena Quispe Tenorio</p>
+                      <p className="text-xs text-gray-600">3 artículos</p>
                     </div>
                   </div>
                 </div>

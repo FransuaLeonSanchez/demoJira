@@ -117,7 +117,10 @@ function Home() {
                   marcos de trabajo ágiles en diversos contextos.
                 </p>
                 <div className="flex items-center justify-between">
-                  <span className="text-sm text-gray-500">12 Nov 2024</span>
+                  <div>
+                    <span className="text-sm text-gray-500">12 Nov 2024</span>
+                    <span className="text-sm text-gray-500 ml-2">• Por Walter Velasquez Solis</span>
+                  </div>
                   <a href="#" className="text-green-600 hover:text-green-800 font-semibold">Participar</a>
                 </div>
               </div>
