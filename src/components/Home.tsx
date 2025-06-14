@@ -13,9 +13,9 @@ function Home() {
             <span className="text-blue-600 block">Software</span>
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Explora el futuro del desarrollo de software con metodologías adaptativas. 
-            Un espacio académico para compartir conocimiento, investigación y experiencias 
-            en el desarrollo ágil y adaptativo de sistemas.
+            Explora el futuro del desarrollo de software con metodologías adaptativas innovadoras. 
+            Un espacio académico colaborativo para compartir conocimiento, investigación y experiencias 
+            en el desarrollo ágil y adaptativo de sistemas modernos.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300">
