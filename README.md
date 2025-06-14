@@ -32,11 +32,41 @@ Esta plataforma sirve como hub central para estudiantes, profesores e investigad
   - Sistema de tags/etiquetas
   - Métricas de engagement
 
+### 📚 Sistema de Artículos
+- **Exploración de contenido académico:**
+  - Artículos destacados en la página principal
+  - Filtrado por categorías (Metodologías, Arquitectura, DevOps, Casos)
+  - Búsqueda de artículos por título, autor o tags
+  - Información detallada de autores
+  - Tags populares y autores destacados
+  - Tiempo estimado de lectura
+
+### 🔬 Sección de Investigación
+- **Gestión de proyectos de investigación:**
+  - Estados de proyecto (En progreso, Completado, Publicado)
+  - Indicadores visuales de progreso
+  - Información de financiamiento
+  - Equipo de investigación
+  - Objetivos y metodología detallada
+  - Filtros por estado y área
+  - Estadísticas generales
+
+### 📞 Página de Contacto
+- **Comunicación integral:**
+  - Formulario de contacto categorizado
+  - Información de ubicación con mapa integrado
+  - Datos del equipo docente
+  - Horarios de atención
+  - Preguntas frecuentes (FAQ)
+  - Enlaces a redes sociales
+  - Múltiples canales de contacto
+
 ### 🎨 Diseño UI/UX
 - Interfaz completamente responsiva
 - Diseño accesible y moderno
 - Transiciones suaves y animaciones
 - Modo claro optimizado para lectura
+- Navegación intuitiva con indicadores de página activa
 
 ## 🛠️ Tecnologías Utilizadas
 
@@ -82,8 +112,11 @@ demoJira/
 │   └── vite.svg           # Logo de Vite
 ├── src/
 │   ├── components/
-│   │   ├── Forums.tsx     # Componente de foros
-│   │   └── Home.tsx       # Componente de página principal
+│   │   ├── Home.tsx       # Componente de página principal
+│   │   ├── Articles.tsx   # Componente de artículos académicos
+│   │   ├── Forums.tsx     # Componente de foros de discusión
+│   │   ├── Research.tsx   # Componente de proyectos de investigación
+│   │   └── Contact.tsx    # Componente de contacto e información
 │   ├── App.tsx            # Componente principal con enrutamiento
 │   ├── main.tsx           # Punto de entrada
 │   └── index.css          # Estilos globales con Tailwind
@@ -105,18 +138,33 @@ demoJira/
 ## 🌐 Páginas y Rutas
 
 - `/` - Página principal con información general del curso
+- `/articulos` - Artículos académicos y publicaciones
 - `/foros` - Sistema de foros de discusión
+- `/investigacion` - Proyectos de investigación activos y completados
+- `/contacto` - Información de contacto y formulario de consultas
 
 ## 🎯 Próximas Características
 
+### ✅ Completadas
+- [x] Sistema de navegación entre páginas
+- [x] Página de artículos académicos con búsqueda y filtros
+- [x] Sistema de foros de discusión
+- [x] Sección de investigación con gestión de proyectos
+- [x] Página de contacto con formulario y mapas
+
+### 🚀 En desarrollo
 - [ ] Sistema de autenticación para estudiantes
-- [ ] Publicación y gestión de artículos
-- [ ] Sección de recursos descargables
+- [ ] Backend para gestión dinámica de contenido
+- [ ] Sistema de comentarios en artículos
+- [ ] Funcionalidad de respuesta en foros
+- [ ] Publicación de nuevos artículos por usuarios autorizados
 - [ ] Sistema de notificaciones
 - [ ] Perfil de usuario
-- [ ] Sistema de mensajería
+- [ ] Sistema de mensajería privada
 - [ ] Calendario de eventos académicos
 - [ ] Integración con plataformas de la UNI
+- [ ] Sistema de evaluaciones y calificaciones
+- [ ] Descarga de recursos y materiales del curso
 
 ## 👥 Contribución
 

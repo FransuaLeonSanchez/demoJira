@@ -2,6 +2,9 @@ import { useState } from 'react'
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom'
 import Home from './components/Home'
 import Forums from './components/Forums'
+import Articles from './components/Articles'
+import Research from './components/Research'
+import Contact from './components/Contact'
 
 function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -32,15 +35,30 @@ function Navigation() {
             >
               Inicio
             </Link>
-            <a href="#articulos" className="text-gray-700 hover:text-blue-600 transition duration-300">Artículos</a>
+            <Link 
+              to="/articulos" 
+              className={`${isActive('/articulos') ? 'text-blue-600' : 'text-gray-700'} hover:text-blue-600 transition duration-300`}
+            >
+              Artículos
+            </Link>
             <Link 
               to="/foros" 
               className={`${isActive('/foros') ? 'text-blue-600' : 'text-gray-700'} hover:text-blue-600 transition duration-300`}
             >
               Foros
             </Link>
-            <a href="#investigacion" className="text-gray-700 hover:text-blue-600 transition duration-300">Investigación</a>
-            <a href="#contacto" className="text-gray-700 hover:text-blue-600 transition duration-300">Contacto</a>
+            <Link 
+              to="/investigacion" 
+              className={`${isActive('/investigacion') ? 'text-blue-600' : 'text-gray-700'} hover:text-blue-600 transition duration-300`}
+            >
+              Investigación
+            </Link>
+            <Link 
+              to="/contacto" 
+              className={`${isActive('/contacto') ? 'text-blue-600' : 'text-gray-700'} hover:text-blue-600 transition duration-300`}
+            >
+              Contacto
+            </Link>
           </div>
 
           <button 
@@ -62,7 +80,13 @@ function Navigation() {
             >
               Inicio
             </Link>
-            <a href="#articulos" className="block py-2 text-gray-700 hover:text-blue-600">Artículos</a>
+            <Link 
+              to="/articulos" 
+              className={`block py-2 ${isActive('/articulos') ? 'text-blue-600' : 'text-gray-700'} hover:text-blue-600`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Artículos
+            </Link>
             <Link 
               to="/foros" 
               className={`block py-2 ${isActive('/foros') ? 'text-blue-600' : 'text-gray-700'} hover:text-blue-600`}
@@ -70,8 +94,20 @@ function Navigation() {
             >
               Foros
             </Link>
-            <a href="#investigacion" className="block py-2 text-gray-700 hover:text-blue-600">Investigación</a>
-            <a href="#contacto" className="block py-2 text-gray-700 hover:text-blue-600">Contacto</a>
+            <Link 
+              to="/investigacion" 
+              className={`block py-2 ${isActive('/investigacion') ? 'text-blue-600' : 'text-gray-700'} hover:text-blue-600`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Investigación
+            </Link>
+            <Link 
+              to="/contacto" 
+              className={`block py-2 ${isActive('/contacto') ? 'text-blue-600' : 'text-gray-700'} hover:text-blue-600`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Contacto
+            </Link>
           </div>
         )}
       </div>
@@ -125,7 +161,10 @@ function App() {
         
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/articulos" element={<Articles />} />
           <Route path="/foros" element={<Forums />} />
+          <Route path="/investigacion" element={<Research />} />
+          <Route path="/contacto" element={<Contact />} />
         </Routes>
         
         <Footer />
