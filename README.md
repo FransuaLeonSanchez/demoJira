@@ -2,6 +2,12 @@
 
 Plataforma académica web para el curso de Desarrollo Adaptativo de Software de la Universidad Nacional de Ingeniería (UNI). Un espacio digital para compartir conocimiento, fomentar la discusión académica y explorar las metodologías ágiles y adaptativas en el desarrollo de software.
 
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-blue)](https://github.com/FransuaLeonSanchez/demoJira)
+[![Jira](https://img.shields.io/badge/Jira-Integrated-green)](https://atlassian.com/software/jira)
+[![React](https://img.shields.io/badge/React-19.1.0-61dafb)](https://react.dev)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.8.3-blue)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.1.10-38b2ac)](https://tailwindcss.com/)
+
 ## 📋 Descripción
 
 Esta plataforma sirve como hub central para estudiantes, profesores e investigadores interesados en el desarrollo adaptativo de software. Proporciona un espacio para:
@@ -76,6 +82,8 @@ Esta plataforma sirve como hub central para estudiantes, profesores e investigad
 - **Build Tool:** Vite v6.3.5
 - **Lenguaje:** TypeScript ~5.8.3
 - **Linting:** ESLint con configuración para React
+- **Control de Versiones:** Git + GitHub
+- **Gestión de Proyectos:** Jira (integrado)
 
 ## 🚀 Instalación y Configuración
 
@@ -87,7 +95,7 @@ Esta plataforma sirve como hub central para estudiantes, profesores e investigad
 
 1. **Clonar el repositorio**
 ```bash
-git clone [URL_DEL_REPOSITORIO]
+git clone https://github.com/FransuaLeonSanchez/demoJira.git
 cd demoJira
 ```
 
@@ -102,6 +110,25 @@ npm run dev
 ```
 
 La aplicación estará disponible en `http://localhost:5173/`
+
+### Configuración para Desarrollo con Jira
+
+Para trabajar con la integración de Jira:
+
+1. **Crear una nueva rama siguiendo la convención:**
+```bash
+git checkout -b SCRUM-[número]-descripcion-feature
+```
+
+2. **Hacer commits con la clave del work item:**
+```bash
+git commit -m "SCRUM-[número]: Descripción del cambio"
+```
+
+3. **Push y crear Pull Request:**
+```bash
+git push -u origin SCRUM-[número]-descripcion-feature
+```
 
 ## 📁 Estructura del Proyecto
 
@@ -143,6 +170,60 @@ demoJira/
 - `/investigacion` - Proyectos de investigación activos y completados
 - `/contacto` - Información de contacto y formulario de consultas
 
+## 🏗️ Arquitectura del Sistema
+
+### Arquitectura Básica
+La plataforma sigue una arquitectura simple y escalable:
+
+```
+┌─────────────┐     ┌──────────────┐     ┌─────────────┐
+│   Frontend  │     │   Backend    │     │  Database   │
+│   React     │────▶│   API REST   │────▶│ PostgreSQL  │
+│   (Vite)    │     │   (Node.js)  │     │             │
+└─────────────┘     └──────────────┘     └─────────────┘
+       │                    │                     
+       │                    ▼                     
+       │            ┌──────────────┐             
+       └───────────▶│   Services   │             
+                    │ Auth | Email │             
+                    └──────────────┘             
+```
+
+### Flujo de Datos Principal
+1. **Autenticación:** Usuario → Frontend → API → Base de Datos → JWT Token
+2. **Visualización:** Usuario → Frontend → API → Consulta DB → Renderizado
+3. **Creación de Contenido:** Usuario → Frontend → API → Guardar en DB → Confirmación
+4. **Búsqueda:** Usuario → Frontend → API → Búsqueda en DB → Resultados
+
+### Estructura de Componentes React
+- **Páginas Principales:** Home, Articles, Forums, Research, Contact
+- **Componentes Compartidos:** Navigation, Search, Footer
+- **Funcionalidades:** Login/Register, Filters, Comments
+- **Estado:** React Context + Local Storage
+
+## 🔗 Integración con Jira
+
+Este proyecto está integrado con Jira para la gestión de tareas y seguimiento del desarrollo.
+
+### Flujo de Trabajo con Jira
+1. **Crear rama con formato:** `git checkout -b SCRUM-X-descripcion-feature`
+2. **Hacer commits incluyendo la clave:** `git commit -m "SCRUM-X: Descripción del cambio"`
+3. **Crear Pull Request con SCRUM-X en el título**
+4. **Vinculación automática:** Los work items (SCRUM-4 a SCRUM-19) se actualizan automáticamente
+
+### Work Items Actuales
+- **SCRUM-4:** Fix author names in Articles component ✅
+- **SCRUM-5:** Improve Home hero section ✅
+- **SCRUM-6:** Enhance Forums search placeholder ✅
+- **SCRUM-7:** Update Research page headers ✅
+- **SCRUM-8 a SCRUM-19:** Disponibles para futuras mejoras
+
+### Últimos Cambios
+- Reemplazo de nombres ficticios por nombres reales de estudiantes en Articles
+- Mejora de textos descriptivos en la página principal
+- Actualización de placeholders de búsqueda para mayor claridad
+- Mejora de títulos y descripciones en páginas de investigación
+
 ## 🎯 Próximas Características
 
 ### ✅ Completadas
@@ -166,9 +247,58 @@ demoJira/
 - [ ] Sistema de evaluaciones y calificaciones
 - [ ] Descarga de recursos y materiales del curso
 
-## 👥 Contribución
+## 👥 Equipo de Desarrollo
+
+### Estudiantes Contribuidores
+- **Adauto Huaman, Isaac** - Líder de Investigación
+- **Espinoza Valverde, Víctor** - Desarrollo Frontend
+- **Flores Rivas, Alvaro** - Arquitectura de Software
+- **Flores Velarde, Roberto** - Tech Lead & Investigador
+- **Huamán Silva, Luis** - Líder de Investigación
+- **León Sánchez, Fransua** - Full Stack Developer
+- **Lopez Milla, Bill** - DevOps Engineer
+- **Pizarro Huarcaya, Angela** - Consultora Ágil
+- **Quispe Tenorio, Ximena** - Arquitecta de Software
+- **Sosa Palacios, Jhosep** - Especialista DevOps
+- **Velasquez Solis, Walter** - Arquitecto de Software
+
+### Contribución
 
 Este es un proyecto académico para el curso de Desarrollo Adaptativo de Software de la UNI. Las contribuciones son bienvenidas siguiendo las guías de estilo del proyecto y los principios SOLID.
+
+## 🛠️ Comandos Útiles para Desarrollo
+
+```bash
+# Ver el estado de los archivos
+git status
+
+# Ver las ramas actuales
+git branch -a
+
+# Cambiar entre ramas
+git checkout [nombre-rama]
+
+# Ver los logs con formato bonito
+git log --oneline --graph --all
+
+# Actualizar tu rama con los últimos cambios de main
+git checkout main
+git pull
+git checkout tu-rama
+git merge main
+
+# Ver los cambios antes de hacer commit
+git diff
+
+# Ejecutar los tests (cuando se implementen)
+npm test
+
+# Construir para producción
+npm run build
+
+# Verificar el código con el linter
+npm run lint
+```
 
 ## 📧 Contacto
 
@@ -178,8 +308,9 @@ Este es un proyecto académico para el curso de Desarrollo Adaptativo de Softwar
 
 ## 📄 Licencia
 
-Proyecto académico de la Universidad Nacional de Ingeniería. Todos los derechos reservados © 2024.
+Proyecto académico de la Universidad Nacional de Ingeniería - Curso de Desarrollo Adaptativo de Software. 
+Todos los derechos reservados © 2024 UNI.
 
 ---
 
-Desarrollado con ❤️ para la comunidad académica de la UNI
+Desarrollado con ❤️ por estudiantes de la Facultad de Ingeniería Industrial y de Sistemas (FIIS) para la comunidad académica de la UNI
